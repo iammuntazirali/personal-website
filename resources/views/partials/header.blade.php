@@ -3,10 +3,11 @@
     <p>BEng in Computer Science and Engineering - Software Specialisation</p>
 
     <nav class="site-nav">
-        <a href="#">Education</a>
-        <a href="#">Languages</a>
-        <a href="#">Certificates</a>
-        <a href="#">Projects</a>
-        <a href="#">Work Experience</a>
+        <a href="{{ route('home') }}">Home</a>
+        <a href="{{ route('education') }}">Education</a>
+        <a href="{{ route('languages') }}">Languages</a>
+        <a href="{{ route('certificates') }}">Certificates</a>
+        <a href="{{ route('projects') }}">Projects</a>
+        <a href="{{ route('experience') }}">Work Experience</a>
     </nav>
 </header>
