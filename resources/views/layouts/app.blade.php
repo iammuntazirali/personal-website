@@ -12,7 +12,8 @@
         <script src="{{ asset('js/main.js') }}" defer></script>
     </head>
     <body>
-        @include('layouts.navigation')
+        {{-- This navigation include is commented out for now --}}
+        {{-- @include('layouts.navigation') --}}
 
         <!-- Page Heading -->
         @isset($header)
