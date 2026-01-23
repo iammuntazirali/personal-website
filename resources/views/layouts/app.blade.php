@@ -15,6 +15,8 @@
         {{-- This navigation include is commented out for now --}}
         {{-- @include('layouts.navigation') --}}
 
+        @include('partials.header')
+
         <!-- Page Heading -->
         @isset($header)
             <header>
