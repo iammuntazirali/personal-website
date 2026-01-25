@@ -1,4 +1,4 @@
-<header>
+<header class="main-header">
     <div class="logo">
         <img>
     </div>

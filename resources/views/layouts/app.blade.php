@@ -24,13 +24,14 @@
             </header>
         @endisset
 
-        <!-- Page Content -->
-        <main>
-            {{ $slot }}
-        </main>
+        <div class="right-wrapper">
+            <main>
+                {{ $slot }}
+            </main>
 
-        <footer>
-            @include('partials.footer')
-        </footer>
+            <footer>
+                @include('partials.footer')
+            </footer>
+        </div>
     </body>
 </html>

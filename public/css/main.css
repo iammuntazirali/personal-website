@@ -10,14 +10,32 @@ html {
 
 body {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #333;
     background-color: #ffffff;
 }
 
-.main {
+.main-header{
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 20%;
+    align-self: flex-start;
+    padding: 2em;
+    background-color: #1a1a1a;
+    color: white;
+    min-height: 100vh;
+    position: sticky;
+}
+
+.right-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+main {
     flex: 1;
+    flex-direction: column;
     padding: 1.5em;
 }
 
@@ -28,4 +46,10 @@ section {
 section h2 {
     margin-bottom: 0.5em;
     font-size: 1.7em;
+}
+
+footer{
+    flex: 1;
+    flex-direction: column;
+    padding-left: 1.5em;
 }
