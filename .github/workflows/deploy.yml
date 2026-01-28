@@ -30,8 +30,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20
+
       - name: Install NPM packages
         run: npm install
+
       - name: Build assets
         run: npm run build
 
@@ -45,7 +47,11 @@ jobs:
           protocol: ftps
           port: 21
           local-dir: ./            # whole repo
-          exclude: public/**       # skip public folder
+          exclude: |
+            public/**       
+            node_modules/**
+            .git/**
+            tests/**
           server-dir: ../          # parent of public_html
 
       # Deploy only public/ to public_html
