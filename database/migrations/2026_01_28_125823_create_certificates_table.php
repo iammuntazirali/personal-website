@@ -13,6 +13,24 @@ return new class extends Migration
     {
         Schema::create('certificates', function (Blueprint $table) {
             $table->id();
+            
+            $table->foreignId('profile_id')
+                    ->constrained()
+                    ->onDelete('cascade');
+
+            $table->foreignId('issuer_id')
+                    ->constrained()
+                    ->onDelete('cascade'); 
+
+            $table->string('name');
+            $table->text('description')->nullable();
+
+            $table->date('date_awarded');
+            $table->date('expiration_date')->nullable(); 
+
+            $table->string('credential_link')->nullable();
+            $table->string('image')->nullable();
+
             $table->timestamps();
         });
     }
