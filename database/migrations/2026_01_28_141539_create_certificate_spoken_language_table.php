@@ -24,7 +24,7 @@ return new class extends Migration
 
             $table->timestamps();
 
-            $table->unique(['certificate_id', 'spoken_language_id']);
+            $table->unique(['certificate_id', 'spoken_language_id'], 'cert_lang_unique');
         });
     }
 
