@@ -44,8 +44,8 @@ jobs:
           server: ${{ secrets.HOSTINGER_HOST }}
           username: ${{ secrets.HOSTINGER_USER }}
           password: ${{ secrets.HOSTINGER_PASS }}
-          protocol: ftps
-          port: 21
+          protocol: sftp
+          port: 65002
           local-dir: ./            # whole repo
           exclude: |
             public/**       
@@ -62,7 +62,7 @@ jobs:
           server: ${{ secrets.HOSTINGER_HOST }}
           username: ${{ secrets.HOSTINGER_USER }}
           password: ${{ secrets.HOSTINGER_PASS }}
-          protocol: ftps
-          port: 21
+          protocol: sftp
+          port: 65002
           local-dir: ./public
           server-dir: /public_html/ 
