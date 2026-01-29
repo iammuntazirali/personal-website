@@ -31,6 +31,7 @@ A work-in-progress personal website designed to showcase my projects, skills, an
 
 - Learn while building
 - Gradually evolve this site alongside my skills
+- Showcase a personal brand that’s both professional and playful, reflecting my belief that learning and growing is more effective when it’s fun!
 
 
 ## Documentation
