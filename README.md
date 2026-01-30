@@ -5,53 +5,61 @@
 A work-in-progress personal website designed to showcase my projects, skills, and ideas. Right now, it’s mostly a skeleton, but exciting features are on the way! 🚀
 
 
+## 💬 Learning in Public 
+
+I’m building this site as I learn, and your feedback is gold! If you have suggestions, ideas, or improvements — whether about code, design, accessibility or usability — don’t hesitate to share them. Every bit of feedback helps me improve and grow. You can also leave feedback directly via [GitHub Issues](https://github.com/a-mamal/personal-website/issues).
+
+
 ## Current Status
-- Homepage: ✅ Basic layout
-- Project showcase: 🔜 Coming soon
-- About / Contact pages: 🔜 Coming soon
+- 🏠 Homepage: ✅ Basic layout
+- 🖼️ Project showcase: 🔜 Coming soon
+- 📖 About / Contact pages: 🔜 Coming soon
 
 
 ## Tech Stack
   
-- Laravel (Blade, Eloquent)
-- HTML, CSS, JavaScript
-- MariaDB
+- 🛠️ Laravel (Blade, Eloquent)
+- 🌐 HTML, CSS, JavaScript
+- 🗄️ MariaDB
 
 
 ## Roadmap / Features To Come
 
-- Responsive design for mobile and desktop
-- Dynamic project listings and portfolio section
-- Contact form with backend functionality
-- Blog section for sharing tutorials, notes, and thoughts
-- Dark/light mode toggle
-- Fun animations and interactive elements
-
-## Goals
-
-- Learn while building
-- Gradually evolve this site alongside my skills
-- Showcase a personal brand that’s both professional and playful, reflecting my belief that learning and growing is more effective when it’s fun!
+- 📱 Responsive design for mobile and desktop
+- 🖼️Dynamic project listings and portfolio section
+- ✉️ Contact form with backend functionality
+- 📝 Blog section for sharing tutorials, notes, and thoughts
+- 🌙 Dark/light mode toggle
+- 🎨 Fun animations and interactive elements
 
 
-## Documentation
+## 🎯 Goals
+
+- 📚 Learn while building
+- 🌱 Gradually evolve this site alongside my skills
+- 🎯 Showcase a personal brand that’s both professional and playful, reflecting my belief that learning and growing is more effective when it’s fun!
+
+
+## 📖 Documentation
 
 Documentation is coming soon.
 
 
-## Deployment
+## 🚀 Deployment
 
 Live at: https://a-mamal.dev/
 
-## Tooling & Acknowledgments
+
+## ⚙️ Tooling & Acknowledgments
 - Deployment automated via GitHub Actions using
   [SamKirkland/FTP-Deploy-Action](https://github.com/SamKirkland/FTP-Deploy-Action)
 
 
-## License
+## 📜 License
 Feel free to look around and get inspired. 
 All code is my own work unless otherwise stated.
 This project is licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
 
 ## Notes
 
