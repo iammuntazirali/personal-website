@@ -83,6 +83,26 @@ return [
             ]) : [],
         ],
 
+        'mariadb_prod' => [
+            'driver' => 'mariadb',
+            'url' => env('DB_PROD_URL'),
+            'host' => env('DB_PROD_HOST'),
+            'port' => env('DB_PROD_PORT'),
+            'database' => env('DB_PROD_DATABASE'),
+            'username' => env('DB_PROD_USERNAME'),
+            'password' => env('DB_PROD_PASSWORD'),
+            'unix_socket' => env('DB_PROD_SOCKET', ''),
+            'charset' => env('DB_PROD_CHARSET', 'utf8mb4'),
+            'collation' => env('DB_PROD_COLLATION', 'utf8mb4_unicode_ci'),
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                (PHP_VERSION_ID >= 80500 ? \Pdo\Mysql::ATTR_SSL_CA : \PDO::MYSQL_ATTR_SSL_CA) => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
+        ],
+
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DB_URL'),
