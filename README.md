@@ -7,7 +7,15 @@ A work-in-progress personal website designed to showcase my projects, skills, an
 
 ## 💬 Learning in Public 
 
-I’m building this site as I learn, and your feedback is gold! If you have suggestions, ideas, or improvements — whether about code, design, accessibility or usability — don’t hesitate to share them. Every bit of feedback helps me improve and grow. You can also leave feedback directly via [GitHub Issues](https://github.com/a-mamal/personal-website/issues).
+I'm building this site as I learn, and your feedback is gold! If you have suggestions, ideas, or improvements — whether about code, design, accessibility or usability — don’t hesitate to share them. Every bit of feedback helps me improve and grow. 
+You can also leave feedback directly via [GitHub Issues](https://github.com/a-mamal/personal-website/issues).
+
+### 🤝 For Fellow Learners
+I'll make sure to be adding **good first issues** for others beginning their journey.
+We all need a safe place to start with something, and I would love for this personal project to make room for that.
+Exploration, suggestions, and discussion are always welcome.
+Feel free to take your time with these issues. 
+I hope they help build confidence to tackle something bigger next!
 
 
 ## Current Status
@@ -26,7 +34,7 @@ I’m building this site as I learn, and your feedback is gold! If you have sugg
 ## Roadmap / Features To Come
 
 - 📱 Responsive design for mobile and desktop
-- 🖼️Dynamic project listings and portfolio section
+- 🖼️ Dynamic project listings and portfolio section
 - ✉️ Contact form with backend functionality
 - 📝 Blog section for sharing tutorials, notes, and thoughts
 - 🌙 Dark/light mode toggle
@@ -38,6 +46,8 @@ I’m building this site as I learn, and your feedback is gold! If you have sugg
 - 📚 Learn while building
 - 🌱 Gradually evolve this site alongside my skills
 - 🎯 Showcase a personal brand that’s both professional and playful, reflecting my belief that learning and growing is more effective when it’s fun!
+- 🤝 Make room for fellow learners by offering beginner-friendly, learning-oriented issues
+
 
 
 ## 📖 Documentation
