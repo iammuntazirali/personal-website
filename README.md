@@ -74,8 +74,10 @@ Documentation is coming soon.
 
 ## Deployment
 
-Live at: https://a-mamal.dev/
-
+- Live at: https://a-mamal.dev/
+- Hosting: Hostinger.
+- Automation: Deployment handled via FTP Deploy Action
+- Database: Credentials managed via .env and .env.production
 
 ## Tooling & Acknowledgments
 - Deployment automated via GitHub Actions using
