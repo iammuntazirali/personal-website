@@ -2,7 +2,24 @@
 
 [<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=0077b6">](https://github.com/SamKirkland/FTP-Deploy-Action)
 
-A work-in-progress personal website designed to showcase my projects, skills, and ideas. Right now, it’s mostly a skeleton, but exciting features are on the way! 🚀
+## Table of Contents
+
+- [💬 Learning in Public](#💬-learning-in-public)
+  - [🤝 For Fellow Learners](#🤝-for-fellow-learners)
+- [📌 Current Status](#📌-current-status)
+- [🛠️ Tech Stack](#🛠️-tech-stack)
+- [🚀 Roadmap / Features To Come](#🚀-roadmap--features-to-come)
+- [🎯 Goals](#🎯-goals)
+- [📖 Documentation](#📖-documentation)
+- [🚀 Deployment](#🚀-deployment)
+- [⚙️ Tooling & Acknowledgments](#⚙️-tooling--acknowledgments)
+- [📜 License](#📜-license)
+- [📝 Notes](#📝-notes)
+
+
+## Overview
+
+A work-in-progress personal website designed to showcase my projects, skills, and ideas. Right now, it’s mostly a skeleton, but exciting features are on the way!
 
 
 ## 💬 Learning in Public 
@@ -18,20 +35,20 @@ Feel free to take your time with these issues.
 I hope they help build confidence to tackle something bigger next!
 
 
-## Current Status
+## 📌 Current Status
 - 🏠 Homepage: ✅ Basic layout
 - 🖼️ Project showcase: 🔜 Coming soon
 - 📖 About / Contact pages: 🔜 Coming soon
 
 
-## Tech Stack
+## 🛠️ Tech Stack
   
 - 🛠️ Laravel (Blade, Eloquent)
 - 🌐 HTML, CSS, JavaScript
 - 🗄️ MariaDB
 
 
-## Roadmap / Features To Come
+## 🚀 Roadmap / Features To Come
 
 - 📱 Responsive design for mobile and desktop
 - 🖼️ Dynamic project listings and portfolio section
@@ -71,7 +88,7 @@ All code is my own work unless otherwise stated.
 This project is licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 
-## Notes
+## 📝 Notes
 
 > ⚠️ This site is a work-in-progress. Features and content may change as I continue building it.
 
