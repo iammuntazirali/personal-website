@@ -68,8 +68,31 @@ I hope they help build confidence to tackle something bigger next!
 
 
 ## Documentation
+This section provides an overview of the project structure, database setup, and development notes.
+It is still in-progress and will be updated.
 
-Documentation is coming soon.
+### Database
+
+**Type:** MariaDB
+
+| Table                         | Description                                   | Notes                    |
+|-------------------------------|-----------------------------------------------|--------------------------|
+| `users`                       | Registered users                              | Authentication           |
+| `profiles`                    | User profiles linked to users                 | See below                |
+| `projects`                    | Personal and thesis projects                  |                          |
+| `issuers`                     | Organizations issuing certificates            | Will be adding more      |
+| `certificates`                | Certificates earned                           | Linked to issuers        | 
+| `degrees`                     | Academic degrees and formal education records | Linked to issuers        | 
+| `spoken_languages`            | Languages spoken, including proficiency level |                          |
+| `certificate_spoken_language` | Links certificates to spoken languages        | Pivot table for many-to-many relation |
+
+
+> **Note:**  
+> The database schema supports multiple profiles per user.  
+> The application is not in that state. Remember...i'ts a skeleton!  
+> Support for multiple profiles will be added in the future.
+
+
 
 
 ## Deployment
