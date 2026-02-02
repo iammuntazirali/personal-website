@@ -5,12 +5,13 @@
 ## Table of Contents
 
 - [Learning in Public](#learning-in-public)
-  - [For Fellow Learners](#for-fellow-learners)
+    - [For Fellow Learners](#for-fellow-learners)
 - [Current Status](#current-status)
 - [Tech Stack](#tech-stack)
 - [Roadmap / Features To Come](#roadmap--features-to-come)
 - [Goals](#goals)
 - [Documentation](#documentation)
+- [Setup](#setup)
 - [Deployment](#deployment)
 - [Tooling & Acknowledgments](#tooling--acknowledgments)
 - [License](#license)
@@ -89,22 +90,83 @@ It is still in-progress and will be updated.
 
 > **Note:**  
 > The database schema supports multiple profiles per user.  
-> The application is not in that state. Remember...i'ts a skeleton!  
+> The application is not in that state. Remember...it's a skeleton!  
 > Support for multiple profiles will be added in the future.
 
 ## Future Improvements
 
-| Area                   | Planned Enhancements                                                                 |
-|------------------------|------------------------------------------------------------------------------------|
+| Area                    | Planned Enhancements                                                               |
+|-------------------------|------------------------------------------------------------------------------------|
 | User Profiles           | Support multiple profiles per user; currently only one profile per user            |
-| Projects & Portfolio    | Dynamic project listings, filtering, and categorization                             |
-| Certificates            | Enhanced management, filtering by issuer, and linking to profiles                   |
+| Projects & Portfolio    | Dynamic project listings, filtering, and categorization                            |
+| Certificates            | Enhanced management, filtering by issuer, and linking to profiles                  |
 | Blog Section            | Optional blog for tutorials, learning notes, and reflections (under consideration) |
 | Accessibility           | Improvements for keyboard navigation, screen readers, and ARIA attributes          |
-| Responsive Design       | Refined layouts for mobile, tablet, and desktop screens                             |
-| Dark/Light Mode         | Smooth toggle between themes with persistence                                       |
-| Interactive Elements    | Animations and UI enhancements to make the site engaging                             |
+| Responsive Design       | Refined layouts for mobile, tablet, and desktop screens                            |
+| Dark/Light Mode         | Smooth toggle between themes with persistence                                      |
+| Interactive Elements    | Animations and UI enhancements to make the site engaging                           |
                           
+
+## Setup
+
+This project uses Laravel with a simple local development setup, using **Laravel Herd** for local PHP and environment management, and **Laravel Breeze** for basic authentication scaffolding.
+The database used is **MariaDB**.
+
+### Local Development
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/a-mamal/personal-website.git
+   cd personal-website
+   ```
+   
+2. Install dependencies:
+   
+   ```bash
+   composer install
+   ```
+
+3. Copy the example environment file and generate an app key:
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
+   > Note: The `.env` file is intentionally not committed to version control.
+
+4. Configure your database credentials in `.env`, eg.:
+   ```env
+   DB_CONNECTION = mysql
+   DB_HOST       = 127.0.0.1
+   DB_PORT       = 3306
+   DB_DATABASE   = personal_website
+   DB_USERNAME   = your_username
+   DB_PASSWORD   = your_password
+   ```
+5. Run migrations and seed initial data:
+   
+   ```bash
+   php artisan migrate --seed
+   ```
+
+6. Start the development server:
+
+- If using Laravel Herd:
+    - Open the project in Herd.
+    - Visit the Herd-provided local URL.
+- Otherwise:
+    - Run
+      ```bash
+      php artisan serve
+      ```
+    - Visit http://localhost:8000 to view the site.
+
+## Contributing
+
+I welcome contributions from anyone looking to learn and experiment.  
+Check out the project board for beginner-friendly issues: [Project Board](https://github.com/users/a-mamal/projects/4)
+
+You can also leave suggestions, report bugs, or share ideas via [GitHub Issues](https://github.com/a-mamal/personal-website/issues).
+
 
 ## Deployment
 
