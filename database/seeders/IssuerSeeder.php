@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class IssuerSeeder extends Seeder
 {
@@ -11,7 +12,142 @@ class IssuerSeeder extends Seeder
      * Run the database seeds.
      */
     public function run(): void
-    {
-        //
+    {   
+        //In alphabetical order
+        $issuers = [
+            [
+                'name' => 'Amazon',
+                'type' => 'Company',
+                'website' => 'https://www.amazon.com/',
+                'contact_email' => null
+            ],
+            [
+                'name' => 'Apple',
+                'type' => 'Company',
+                'website' => 'https://www.apple.com/',
+                'contact_email' => null,
+            ],
+            [
+                'name' => 'Atlassian',
+                'type' => 'Company',
+                'website' => 'https://www.atlassian.com/',
+                'contact_email' => null,
+            ],
+            [
+                'name' => 'Coursera',
+                'type' => 'Platform',
+                'website' => 'https://www.coursera.org/',
+                'contact_email' => null,
+            ],
+            [
+                'name' => 'edX',
+                'type' => 'Platform',
+                'website' => 'https://www.edx.org/',
+                'contact_email' => null,
+            ],
+            [
+                'name' => 'freeCodeCamp',
+                'type' => 'Platform',
+                'website' => 'https://www.freecodecamp.org/',
+                'contact_email' => null,
+            ],
+            [
+                'name' => 'Google',
+                'type' => 'Company',
+                'website' => 'https://www.google.com/',
+                'contact_email' => null,
+            ],
+            [
+                'name' => 'Harvard University',
+                'type' => 'University',
+                'website' => 'https://www.harvard.edu/',
+                'contact_email' => null,
+            ],
+            [
+                'name' => 'IBM',
+                'type' => 'Company',
+                'website' => 'https://www.ibm.com/',
+                'contact_email' => null,
+            ],
+            [
+                'name' => 'Khan Academy',
+                'type' => 'Platform',
+                'website' => 'https://www.khanacademy.org/',
+                'contact_email' => null,
+            ],
+            [
+                'name' => 'Microsoft',
+                'type' => 'Company',
+                'website' => 'https://www.microsoft.com/',
+                'contact_email' => null,
+            ],
+            [
+                'name' => 'MIT',
+                'type' => 'University',
+                'website' => 'https://www.mit.edu/',
+                'contact_email' => null,
+            ],
+            [
+                'name' => 'Moz',
+                'type' => 'Company',
+                'website' => 'https://moz.com/',
+                'contact_email' => null,
+            ],
+            [
+                'name' => 'Stanford University',
+                'type' => 'University',
+                'website' => 'https://www.stanford.edu/',
+                'contact_email' => null,
+            ],
+            [
+                'name' => 'Udacity',
+                'type' => 'Platform',
+                'website' => 'https://www.udacity.com/',
+                'contact_email' => null,
+            ],
+            [
+                'name' => 'Udemy',
+                'type' => 'Platform',
+                'website' => 'https://www.udemy.com/',
+                'contact_email' => null,
+            ],
+            [
+                'name' => 'University of Cambridge',
+                'type' => 'University',
+                'website' => 'https://www.cam.ac.uk/',
+                'contact_email' => null,
+            ],
+            [
+                'name' => 'University of Michigan',
+                'type' => 'University',
+                'website' => 'https://www.umich.edu/',
+                'contact_email' => null,
+            ],
+            [
+                'name' => 'University of Oxford',
+                'type' => 'University',
+                'website' => 'https://www.ox.ac.uk/',
+                'contact_email' => null,
+            ],
+            [
+                'name' => 'University of Thessaly',
+                'type' => 'University',
+                'website' => 'https://www.uth.gr/',
+                'contact_email' => 'info@uth.gr',
+            ],
+        ];
+
+        foreach ($issuers as $issuer) {
+            DB::table('issuers')->updateOrInsert(
+                ['name' => $issuer['name']],
+                [
+                    'type' => $issuer['type'],
+                    'website' => $issuer['website'],
+                    'contact_email' => $issuer['contact_email'],
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ]
+            );
+        }
     }
 }
