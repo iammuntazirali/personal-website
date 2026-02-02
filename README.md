@@ -12,6 +12,7 @@
 - [Goals](#goals)
 - [Documentation](#documentation)
 - [Setup](#setup)
+- [Contributing](#contributing)
 - [Deployment](#deployment)
 - [Tooling & Acknowledgments](#tooling--acknowledgments)
 - [License](#license)
@@ -114,25 +115,31 @@ The database used is **MariaDB**.
 
 ### Local Development
 
-1. Clone the repository:
+1. Fork the repository
+   
+   Go to the repo page and click Fork.
+   This creates a copy under your account.
+      
+2. Clone your fork:
+   
    ```bash
-   git clone https://github.com/a-mamal/personal-website.git
+   git clone https://github.com/<your-username>/personal-website.git
    cd personal-website
    ```
    
-2. Install dependencies:
+3. Install dependencies:
    
    ```bash
    composer install
    ```
 
-3. Copy the example environment file and generate an app key:
+4. Copy the example environment file and generate an app key:
    ```bash
    cp .env.example .env
    php artisan key:generate
    ```
    > Notes:
-   > - The `.env` file is intentionally not committed to version control.
+   > - The `.env` file is intentionally not committed.
    > - The generated key is updated automatically in `.env`.
    >     If it doesn’t:
    >     - Copy the key manually from the console output:
@@ -144,7 +151,7 @@ The database used is **MariaDB**.
    >       APP_KEY = base64:xxxxxxxxxxxxxxxxxxxxxxxxxx
    >       ```
 
-4. Configure your database credentials in `.env`, eg.:
+5. Configure your database credentials in `.env`, eg.:
    ```env
    DB_CONNECTION = mysql
    DB_HOST       = 127.0.0.1
@@ -153,13 +160,13 @@ The database used is **MariaDB**.
    DB_USERNAME   = your_username
    DB_PASSWORD   = your_password
    ```
-5. Run migrations and seed initial data:
+6. Run migrations and seed initial data:
    
    ```bash
    php artisan migrate --seed
    ```
 
-6. Start the development server:
+7. Start the development server:
 
 - If using Laravel Herd:
     - Open the project in Herd.
@@ -173,10 +180,41 @@ The database used is **MariaDB**.
 
 ## Contributing
 
-I welcome contributions from anyone looking to learn and experiment.  
-Check out the project board for beginner-friendly issues: [Project Board](https://github.com/users/a-mamal/projects/4)
+I welcome contributions from anyone looking to learn and experiment!
 
-You can also leave suggestions, report bugs, or share ideas via [GitHub Issues](https://github.com/a-mamal/personal-website/issues).
+- Pick tasks from the [Project Board](https://github.com/users/a-mamal/projects/4)
+- Leave suggestions, report bugs, or share ideas via [GitHub Issues](https://github.com/a-mamal/personal-website/issues).
+- Beginner-friendly issues are labeled **good first issue**.
+- Don’t worry about messing things up. We’re all learning together!
+
+### 1. Fork & Branching
+
+1. Fork the repository.
+2. Clone your fork.
+3. Create a new branch for your changes. 
+Example:
+```bash
+git checkout -b feature/your-feature-name
+```
+Avoid committing directly to `main`.
+
+### 2. Commit Messages
+Use descriptive commit messages. 
+Example format:
+```
+type(scope): short description
+```
+
+### 3. Pull Requests
+When your feature or fix is ready: 
+- Push your branch to your fork
+- Open a pull request to `main` on the original repo.
+- It's always helpful to include a description of what you’ve changed and why.
+
+### 4. Code Style / Guidelines
+- Try to follow the existing coding style.
+- Keep things consistent with the rest of the project.
+- Don’t worry if it’s not perfect. Feedback is part of the process!
 
 
 ## Deployment
