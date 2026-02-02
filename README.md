@@ -131,7 +131,18 @@ The database used is **MariaDB**.
    cp .env.example .env
    php artisan key:generate
    ```
-   > Note: The `.env` file is intentionally not committed to version control.
+   > Notes:
+   > - The `.env` file is intentionally not committed to version control.
+   > - The generated key is updated automatically in `.env`.
+   >     If it doesn’t:
+   >     - Copy the key manually from the console output:
+   >       ```bash
+   >       Application key [base64:xxxxxxxxxxxxxxxxxxxxxxxxxx] set successfully.
+   >       ```
+   >     - Then paste it into `.env` like:
+   >       ```env
+   >       APP_KEY = base64:xxxxxxxxxxxxxxxxxxxxxxxxxx
+   >       ```
 
 4. Configure your database credentials in `.env`, eg.:
    ```env
