@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
@@ -11,9 +11,7 @@ Route::get('/', function() {
 
 Route::get('/projects', [ProjectController::class, 'index'])->name('projects');
 
-Route::get('/about', function() {
-    return view('pages.about');
-})->name('about');
+Route::get('/about', [AboutController::class, 'index'])->name('about');
 
 Route::get('/contact', function() {
     return view('pages.contact');
