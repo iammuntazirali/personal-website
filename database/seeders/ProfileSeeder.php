@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Profile;
 
 class ProfileSeeder extends Seeder
 {
@@ -11,7 +11,11 @@ class ProfileSeeder extends Seeder
      * Run the database seeds.
      */
     public function run(): void
-    {
-        //
+    {   
+        if (!app()->environment('local')) {
+            return;
+        }
+
+        Profile::factory()->count(5)->create();
     }
 }
