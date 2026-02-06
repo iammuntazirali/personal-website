@@ -22,6 +22,11 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
 
-        $this->call(ProfileSeeder::class);
+        if (app()->environment('local')) {
+            $this->call([
+                \Database\Seeders\ProfileSeeder::class,
+                \Database\Seeders\ProfileLinkSeeder::class,
+            ]);
+        }
     }
 }
