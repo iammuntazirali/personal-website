@@ -24,4 +24,4 @@ Homestead.json
 Homestead.yaml
 Thumbs.db
 
-database/seeders/ProductionProfileLinkSeeder.php
+/database/seeders/production
