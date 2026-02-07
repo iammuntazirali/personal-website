@@ -36,11 +36,8 @@ class Certificate extends Model
         return $this->belongsTo(Issuer::class);
     }
 
-    public function spokenLanguages()
+    public function spokenLanguage()
     {
-        return $this->belongsToMany(
-            SpokenLanguage::class,
-            'certificate_spoken_language'
-        );
+        return $this->belongsTo(SpokenLanguage::class);
     }
 }

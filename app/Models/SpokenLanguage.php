@@ -25,9 +25,6 @@ class SpokenLanguage extends Model
 
     public function certificates()
     {
-        return $this->belongsToMany(
-            Certificate::class,
-            'certificate_spoken_language'
-        );
+        return $this->hasMany(Certificate::class);
     }
 }

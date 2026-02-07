@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\User;
 use App\Models\Profile;
 
 class ProfileSeeder extends Seeder
@@ -16,6 +17,10 @@ class ProfileSeeder extends Seeder
             return;
         }
 
-        Profile::factory()->count(5)->create();
+        $user = User::first(); // the user created in DatabaseSeeder
+
+        Profile::factory()->count(2)->create([
+            'user_id' => $user->id, // explicitly link to the main user
+        ]);
     }
 }
