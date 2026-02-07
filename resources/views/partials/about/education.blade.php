@@ -13,7 +13,13 @@
                 <br>
 
                 {{-- Issuer name --}}
-                <em>{{ $degree->issuer->name ?? 'Unknown issuer' }}</em>
+                @if($degree->issuer->website)
+                    <a href="{{ $degree->issuer->website }}" target="_blank" rel="noopener noreferrer">
+                        <em>{{ $degree->issuer->name ?? 'Unknown issuer' }}</em>
+                    </a>
+                @else
+                    <em>{{ $degree->issuer->name ?? 'Unknown issuer' }}</em>
+                @endif
                 <br>
 
                 {{-- Formatted start and end dates --}}
