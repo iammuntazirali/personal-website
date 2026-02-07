@@ -13,6 +13,7 @@ class Certificate extends Model
     protected $fillable = [
         'profile_id',
         'issuer_id',
+        'spoken_language_id',
         'name',
         'description',
         'date_awarded',

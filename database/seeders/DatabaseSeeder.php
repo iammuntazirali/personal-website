@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             $this->call([
                 \Database\Seeders\ProfileSeeder::class,
                 \Database\Seeders\ProfileLinkSeeder::class,
+                \Database\Seeders\CertificateSeeder::class,
             ]);
         }
     }
