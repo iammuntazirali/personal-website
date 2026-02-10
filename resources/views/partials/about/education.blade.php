@@ -12,13 +12,13 @@
                 @endif
                 <br>
 
-                {{-- Issuer name --}}
-                @if($degree->issuer->website)
-                    <a href="{{ $degree->issuer->website }}" target="_blank" rel="noopener noreferrer">
-                        <em>{{ $degree->issuer->name ?? 'Unknown issuer' }}</em>
+                {{-- Organization name --}}
+                @if($degree->organization->website)
+                    <a href="{{ $degree->organization->website }}" target="_blank" rel="noopener noreferrer">
+                        <em>{{ $degree->organization->name ?? 'Unknown organization' }}</em>
                     </a>
                 @else
-                    <em>{{ $degree->issuer->name ?? 'Unknown issuer' }}</em>
+                    <em>{{ $degree->organization->name ?? 'Unknown organization' }}</em>
                 @endif
                 <br>
 

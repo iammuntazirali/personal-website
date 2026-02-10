@@ -7,12 +7,12 @@
             @if($cert->image)
                 <img class="cert-image" 
                     src="{{ asset('images/certificates/' . $cert->image) }}" 
-                    alt="{{ $cert->name }} by {{ $cert->issuer->name }}">
+                    alt="{{ $cert->name }} by {{ $cert->organization->name }}">
             @endif
 
             <div class="cert-text">
                 <h3>{{ $cert->name }}</h3>
-                <h4>{{ $cert->issuer->name }}</h4>
+                <h4>{{ $cert->organization->name }}</h4>
                 @if($cert->spokenLanguage)
                     <p>Language: {{ $cert->spokenLanguage->name }}</p>
                 @endif

@@ -10,7 +10,7 @@ class AboutController extends Controller
 {
     public function index()
     {
-        $user = User::with('profiles.links' , 'profiles.degrees.issuer')->first();
+        $user = User::with('profiles.links' , 'profiles.degrees.organization')->first();
         $profile = $user?->profiles->first();
 
         // Format degrees

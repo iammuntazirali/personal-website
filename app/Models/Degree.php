@@ -12,7 +12,7 @@ class Degree extends Model
 
     protected $fillable = [
         'profile_id',
-        'issuer_id',
+        'organization_id',
         'title',
         'level',
         'field',
@@ -27,8 +27,8 @@ class Degree extends Model
         return $this->belongsTo(Profile::class);
     }
 
-    public function issuer()
+    public function organization()
     {
-        return $this->belongsTo(Issuer::class);
+        return $this->belongsTo(Organization::class);
     }
 }

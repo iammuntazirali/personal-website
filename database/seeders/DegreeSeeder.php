@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Degree;
 use App\Models\Profile;
-use App\Models\Issuer;
+use App\Models\Organization;
 
 class DegreeSeeder extends Seeder
 {
@@ -16,14 +16,14 @@ class DegreeSeeder extends Seeder
     public function run(): void
     {
         $profile = Profile::first(); // pick first profile
-        $issuers = Issuer::all();    // get all issuers
+        $organizations = Organization::all();    // get all organizations
 
         Degree::factory(3)->create([
             'profile_id' => $profile->id,
             
-            // pick a random issuer for each degree
-            'issuer_id' => function () use ($issuers) {
-                return $issuers->random()->id; 
+            // pick a random organization for each degree
+            'organization_id' => function () use ($organizations) {
+                return $organizations->random()->id; 
             },
         ]);
     }

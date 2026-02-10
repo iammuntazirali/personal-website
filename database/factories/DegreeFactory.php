@@ -5,7 +5,7 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Degree;
 use App\Models\Profile;
-use App\Models\Issuer;
+use App\Models\Organization;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Degree>
@@ -21,7 +21,7 @@ class DegreeFactory extends Factory
     {
         return [
             'profile_id' => Profile::factory(),
-            'issuer_id' => Issuer::factory(),
+            'organization_id' => Organization::factory(),
 
             // Degree details
             'title' => $this->faker->sentence(3),

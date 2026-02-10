@@ -12,7 +12,7 @@ class Certificate extends Model
 
     protected $fillable = [
         'profile_id',
-        'issuer_id',
+        'organization_id',
         'spoken_language_id',
         'name',
         'description',
@@ -32,9 +32,9 @@ class Certificate extends Model
         return $this->belongsTo(Profile::class);
     }
 
-    public function issuer()
+    public function organization()
     {
-        return $this->belongsTo(Issuer::class);
+        return $this->belongsTo(Organization::class);
     }
 
     public function spokenLanguage()

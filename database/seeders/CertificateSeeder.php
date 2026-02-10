@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Certificate;
 use App\Models\Profile;
-use App\Models\Issuer;
+use App\Models\Organization;
 
 class CertificateSeeder extends Seeder
 {
@@ -16,10 +16,10 @@ class CertificateSeeder extends Seeder
     public function run(): void
     {
         $profiles = Profile::all();
-        $issuers = Issuer::all();
+        $organizations = Organization::all();
 
-        if ($profiles->isEmpty() || $issuers->isEmpty()) {
-            $this->command->info('No profiles or issuers found. Seed them first!');
+        if ($profiles->isEmpty() || $organizations->isEmpty()) {
+            $this->command->info('No profiles or organizations found. Seed them first!');
             return;
         }
 
@@ -27,7 +27,7 @@ class CertificateSeeder extends Seeder
             // Create 3 certificates per profile
             Certificate::factory(3)->create([
                 'profile_id' => $profile->id,
-                'issuer_id' => $issuers->random()->id,
+                'organization_id' => $organizations->random()->id,
                 'spoken_language_id' => $profile->spokenLanguages->isNotEmpty()
                     ? $profile->spokenLanguages->random()->id
                     : null,

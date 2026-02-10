@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Issuer extends Model
+class Organization extends Model
 {
-    /** @use HasFactory<\Database\Factories\IssuerFactory> */
+    /** @use HasFactory<\Database\Factories\OrganizationFactory> */
     use HasFactory;
 
     protected $fillable = [
