@@ -10,7 +10,7 @@
 - [Tech Stack](#tech-stack)
 - [Roadmap / Features To Come](#roadmap--features-to-come)
 - [Goals](#goals)
-- [Documentation](#documentation)
+- [Database](#database)
 - [Setup](#setup)
 - [Contributing](#contributing)
 - [Deployment](#deployment)
@@ -70,24 +70,24 @@ I hope they help build confidence to tackle something bigger next!
 
 
 
-## Documentation
-This section provides an overview of the project structure, database setup, and development notes.
-It is still in-progress and will be updated.
-
-### Database
-
+## Database
 **Type:** MariaDB
 
-| Table                         | Description                                   | Notes                    |
-|-------------------------------|-----------------------------------------------|--------------------------|
-| `users`                       | Registered users                              | Authentication           |
-| `profiles`                    | User profiles linked to users                 | See below                |
-| `projects`                    | Personal and thesis projects                  |                          |
-| `issuers`                     | Organizations issuing certificates            | Will be adding more      |
-| `certificates`                | Certificates earned                           | Linked to issuers        | 
-| `degrees`                     | Academic degrees and formal education records | Linked to issuers        | 
-| `spoken_languages`            | Languages spoken, including proficiency level |                          |
-| `certificate_spoken_language` | Links certificates to spoken languages        | Pivot table for many-to-many relation |
+This section provides an overview of the database structure, tables, and relationships.
+It is still in-progress and will be updated.
+
+Tables in this project:
+
+- [`users`](#table-users)
+- [`profiles`](#table-profiles)
+- [`profile_links`](#table-profile_links)
+- [`projects`](#table-projects)
+- [`issuers`](#table-issuers)
+- [`degrees`](#table-degrees)
+- [`certificates`](#table-certificates)
+- [`spoken_languages`](#table-spoken_languages)
+
+Detailed descriptions follow below.
 
 ### Table: `users`
 
