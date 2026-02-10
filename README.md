@@ -137,6 +137,30 @@ It is still in-progress and will be updated.
 - `ProfileSeeder` exists
 
 
+### Table: `issuers`
+
+> ⚠️ Note: The `issuers` table will be renamed to [`organizations`](https://github.com/a-mamal/personal-website/issues/48) as part of the [Experiences epic](https://github.com/a-mamal/personal-website/issues/47).  
+> This table is currently used for certificates and degrees, but future work will consolidate all organizations (schools, companies, certifiers, etc.) into a single table.
+
+| Column         | Type         | Nullable | Notes                                  |
+|----------------|--------------|----------|----------------------------------------|
+| `id`           | bigint       | No       | Primary key                            |
+| `name`         | varchar(255) | No       | Name of the issuing organization       |
+| `type`         | varchar(255) | No       | Type of issuer, e.g., company, platform|
+| `website`      | varchar(255) | Yes      | Optional website URL                   |
+| `contact_email`| varchar(255) | Yes      | Optional contact email                 |
+| `created_at`   | timestamp    | Yes      | Laravel timestamp                      |
+| `updated_at`   | timestamp    | Yes      | Laravel timestamp                      |
+
+**Relationships:**  
+- An issuer can have many certificates.  
+- An issuer can have many degrees.  
+
+**Seeder / Factory:**  
+- `IssuerFactory` exists but is currently empty.  
+- `IssuerSeeder` exists and seeds data from `database/seeders/data/issuers.json`.
+
+
 ### Table: `degrees`
 
 | Column       | Type         | Nullable | Notes                                    |
