@@ -110,6 +110,31 @@ It is still in-progress and will be updated.
 - `UserSeeder` doesn't exist yet.
 
 
+### Table: `profiles`
+
+| Column         | Type         | Nullable | Notes                                     |
+|---------------|--------------|----------|--------------------------------------------|
+| `id`          | bigint       | No       | Primary key                                |
+| `user_id`     | bigint       | No       | Foreign key → users.id                     |
+| `display_name`| varchar(255) | No       | Public-facing name                         |
+| `bio`         | text         | Yes      | Short profile description                  |
+| `created_at`  | timestamp    | Yes      | Laravel timestamp                          |
+| `updated_at`  | timestamp    | Yes      | Laravel timestamp                          |
+
+**Relationships:**  
+- A profile belongs to one user  
+- A profile can have many:
+  - certificates  
+  - degrees  
+  - spoken languages  
+  - profile links  
+
+**Seeder / Factory:**  
+- `ProfileFactory` exists  
+- `ProfileSeeder` exists
+
+
+
 
 > **Note:**  
 > The database schema supports multiple profiles per user.  
