@@ -137,6 +137,32 @@ It is still in-progress and will be updated.
 - `ProfileSeeder` exists
 
 
+### Table: `projects`
+
+| Column         | Type          | Nullable | Notes                                                    |
+|----------------|---------------|----------|----------------------------------------------------------|
+| `id`           | bigint        | No       | Primary key                                              |
+| `title`        | varchar(255)  | No       | Name or title of the project                             |
+| `type`         | varchar(255)  | Yes      | Optional type/category of the project                    |
+| `slug`         | varchar(255)  | No       | Unique slug for the project, used in URLs                |
+| `description`  | text          | No       | Detailed description of the project                      |
+| `highlights`   | longtext      | Yes      | Key features, technologies, or notes stored as JSON      |
+| `project_url`  | varchar(255)  | Yes      | Optional live URL for the project                        |
+| `github_url`   | varchar(255)  | Yes      | Optional GitHub repository URL                           |
+| `status`       | enum          | No       | `draft` or `published`, defaults to `draft`              |
+| `created_at`   | timestamp     | Yes      | Laravel timestamp                                        |
+| `updated_at`   | timestamp     | Yes      | Laravel timestamp                                        |
+
+**Relationships:**  
+- A project belongs to one profile  
+
+**Seeder / Factory:**  
+- `ProjectFactory` exists but is currently empty.  
+- `ProjectSeeder` exists and seeds multiple example projects with realistic data. Will be updated. 
+
+> Note: Each project may have highlights and URLs for demo or GitHub, which are useful for showcasing a portfolio. The `status` field allows for draft projects or published projects for display. Highlights are stored as JSON (longtext) for flexibility.
+
+
 ### Table: `issuers`
 
 > ⚠️ Note: The `issuers` table will be renamed to [`organizations`](https://github.com/a-mamal/personal-website/issues/48) as part of the [Experiences epic](https://github.com/a-mamal/personal-website/issues/47).  
