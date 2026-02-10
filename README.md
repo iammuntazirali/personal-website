@@ -134,6 +134,27 @@ It is still in-progress and will be updated.
 - `ProfileSeeder` exists
 
 
+### Table: `spoken_languages`
+
+| Column        | Type         | Nullable | Notes                                         |
+|---------------|--------------|----------|-----------------------------------------------|
+| `id`          | bigint       | No       | Primary key                                   |
+| `profile_id`  | bigint       | No       | Foreign key → profiles.id                    |
+| `name`        | varchar(255) | No       | Language name (e.g. English, Greek)           |
+| `proficiency` | varchar(255) | No       | e.g. Native, Fluent, C2, B2                   |
+| `is_native`   | boolean      | No       | Whether this is the user’s native language    |
+| `created_at`  | timestamp    | Yes      | Laravel timestamp                             |
+| `updated_at`  | timestamp    | Yes      | Laravel timestamp                             |
+
+**Relationships:**  
+- A spoken language belongs to one profile  
+- A spoken language can have many certificates  
+
+**Seeder / Factory:**  
+- `SpokenLanguageFactory` exists  
+- `SpokenLanguageSeeder` exists but is currently empty
+
+
 
 
 > **Note:**  
