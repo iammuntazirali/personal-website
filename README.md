@@ -129,8 +129,6 @@ Detailed descriptions follow below.
   - spoken languages  
   - profile links
   - projects
-    
-> Note: The projects relationship exists in the Project model.
 
 **Seeder / Factory:**  
 - `ProfileFactory` exists  
@@ -168,6 +166,7 @@ Detailed descriptions follow below.
 | Column         | Type          | Nullable | Notes                                                    |
 |----------------|---------------|----------|----------------------------------------------------------|
 | `id`           | bigint        | No       | Primary key                                              |
+| `profile_id    | bigint        |No        | Foreign key → profiles.id, owner of the project          |
 | `title`        | varchar(255)  | No       | Name or title of the project                             |
 | `type`         | varchar(255)  | Yes      | Optional type/category of the project                    |
 | `slug`         | varchar(255)  | No       | Unique slug for the project, used in URLs                |
@@ -179,12 +178,16 @@ Detailed descriptions follow below.
 | `created_at`   | timestamp     | Yes      | Laravel timestamp                                        |
 | `updated_at`   | timestamp     | Yes      | Laravel timestamp                                        |
 
+**Constraints / Indexes:**
+- `profile_id` → foreign key referencing `profiles.id`
+- `slug` is unique
+
 **Relationships:**  
 - A project belongs to one profile  
 
 **Seeder / Factory:**  
 - `ProjectFactory` exists but is currently empty.  
-- `ProjectSeeder` exists and seeds multiple example projects with realistic data. Will be updated. 
+- `ProjectSeeder` exists . It seeds multiple projects and ensures each project is linked to a profile (default profile used if none exists). Will be updated. 
 
 > Note: Each project may have highlights and URLs for demo or GitHub, which are useful for showcasing a portfolio. The `status` field allows for draft projects or published projects for display. Highlights are stored as JSON (longtext) for flexibility.
 
