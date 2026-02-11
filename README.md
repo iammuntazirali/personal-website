@@ -299,6 +299,42 @@ To simplify and future-proof the schema, the table was renamed to `organizations
 - `SpokenLanguageSeeder` exists but is currently empty
 
 
+### Table: `experiences`
+
+| Column             | Type                 | Nullable | Notes                                                     |
+|--------------------|----------------------|----------|-----------------------------------------------------------|
+| `id`               | bigint               | No       | Primary key                                               |
+| `profile_id`       | bigint               | No       | Foreign key → profiles.id, cascade on delete              |
+| `organization_id`  | bigint               | No       | Foreign key → organizations.id, cascade on delete         |
+| `role`             | varchar(255)         | No       | Role or position held                                     |
+| `start_date`       | date                 | Yes      | Optional start date                                       |
+| `end_date`         | date                 | Yes      | Optional end date                                         |
+| `description`      | text                 | Yes      | Optional description of the experience                    |
+| `highlights`       | json                 | Yes      | Optional JSON array of key achievements / notes           |
+| `is_current`       | boolean (tinyint(1)) | No       | Whether the experience is ongoing (defaults to `false`)   |
+| `created_at`       | timestamp            | Yes      | Laravel timestamp                                         |
+| `updated_at`       | timestamp            | Yes      | Laravel timestamp                                         |
+
+**Relationships:**  
+- An experience belongs to one profile  
+- An experience belongs to one organization  
+
+**Constraints:**  
+- `is_current = true` implies `end_date IS NULL` (enforced at DB level with a CHECK constraint)  
+
+**Seeder / Factory:**  
+- `ExperienceFactory` will generate realistic experiences for testing  
+- `ExperienceSeeder` will populate experiences for profiles
+
+**History / Decisions:**  
+This table was added to track user experiences such as jobs, internships, or volunteer positions.  
+- The DB-level `CHECK` constraint ensures consistency between `is_current` and `end_date`.  
+- `start_date` and `end_date` are nullable because users might not remember exact dates  
+- You might argue that `is_current` could be redundant and could be derived from the dates but since people sometimes don’t remember exact dates, having a missing `end_date` doesn’t necessarily mean the experience is current.
+
+> **Note:** Part of the epic [feat(experiences): implement experiences linked to organizations #47](https://github.com/a-mamal/personal-website/issues/47), with the actual migration in sub-issue [#49](https://github.com/a-mamal/personal-website/issues/49).
+
+
 
 
 > **Note:**  
