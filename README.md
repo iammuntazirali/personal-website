@@ -399,7 +399,7 @@ The database used is **MariaDB**.
    >       APP_KEY = base64:xxxxxxxxxxxxxxxxxxxxxxxxxx
    >       ```
 
-5. Configure your database credentials in `.env`, eg.:
+5. Configure your database and admin credentials in `.env`, eg.:
    ```env
    DB_CONNECTION = mysql
    DB_HOST       = 127.0.0.1
@@ -407,12 +407,17 @@ The database used is **MariaDB**.
    DB_DATABASE   = personal_website
    DB_USERNAME   = your_username
    DB_PASSWORD   = your_password
+
+   # Admin credentials for seeding
+   ADMIN_EMAIL=admin@example.com
+   ADMIN_PASSWORD=secret123
    ```
 6. Run migrations and seed initial data:
    
    ```bash
-   php artisan migrate --seed
+   php artisan migrate:fresh --seed
    ```
+   >**Warning:** migrate:fresh deletes all tables and data. Only use in local/dev environments.
 
 7. Start the development server:
 
