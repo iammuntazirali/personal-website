@@ -20,7 +20,7 @@ class ProductionDatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-            ProductionUserSeeder::class,
+            UserSeeder::class,
             OrganizationSeeder::class,
             ProductionProfileSeeder::class,
             ProductionCertificateSeeder::class,

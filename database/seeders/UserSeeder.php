@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
         User::updateOrCreate(
             ['email' => env('ADMIN_EMAIL')],
             [
-                'name' => 'Test User',
+                'name' => env('ADMIN_NAME'),
                 'password' => Hash::make(env('ADMIN_PASSWORD')),
                 'email_verified_at' => now(),
             ]
