@@ -1,0 +1,15 @@
+[
+  {
+    "profile": "Main User Local",
+    "title": "Example Project Title",
+    "type": "Independent Project",
+    "description": "An example project.",
+    "highlights": [
+      "Built responsive UI",
+      "Integrated authentication and authorization"
+    ],
+    "project_url": "https://example.com",
+    "github_url": "https://github.com/mainuserlocal/project",
+    "status": "published"
+  }
+]
