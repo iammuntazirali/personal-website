@@ -19,15 +19,15 @@
 
         @include('partials.header')
 
-        <!-- Page Heading -->
-        @isset($header)
-            <header>
-                {{ $header }}
-            </header>
-        @endisset
-
         <div class="right-wrapper">
             <main>
+                {{-- optional page header slot --}}
+                @isset($header)
+                    <header class="page-header">
+                        {{ $header }}
+                    </header>
+                @endisset
+
                 {{ $slot }}
             </main>
 
