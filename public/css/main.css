@@ -1,3 +1,19 @@
+/* -------------------- Spacing Scale -------------------- */
+:root {
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-xxl: 4rem;
+    
+    --color-text: #333;
+    --color-muted: #555;
+    --color-primary: #1a1a1a;
+    --color-accent: #6495ED;
+    --color-bg: #ffffff;
+}
+
 /* -------------------- Reset & Base -------------------- */
 
 * {
@@ -25,8 +41,8 @@ body {
     flex-direction: column;
     flex: 0 1 20%;
     align-self: flex-start;
-    padding: 2em;
-    background-color: #1a1a1a;
+    padding: var(--space-md);
+    background-color: var(--color-primary);
     color: white;
     min-height: 100vh;
     position: sticky;
@@ -36,11 +52,11 @@ nav a {
     display: block;
     color: white;
     text-decoration: none;
-    margin: 1em 0;
+    margin: var(--space-sm) 0;
 }
 
 nav a:hover {
-    color: #6495ED;
+    color: var(--color-accent);
 }
 
 /* ---------------------- Layout ----------------------- */
@@ -55,41 +71,41 @@ main {
     display: flex;
     flex-direction: column;
     flex: 1;
-    padding: 1.5em;
+    padding: var(--space-xl);
 }
 
 footer{
     flex: 1;
     flex-direction: column;
-    padding-left: 1.5em;
+    padding-left: var(--space-md);
 }
 
 /* ---------------- Section & Headers ------------------- */
 
 section {
-    margin: 1.5em 0;
+    margin: var(--space-md) 0;
 }
 
 section h2 {
-    margin-bottom: 0.5em;
+    margin-bottom: var(--space-sm);
     font-size: 1.7em;
-    color: #1a1a1a;
+    color: var(--color-primary);
 }
 
 /* Page header */
 
 .page-header {
-    margin-bottom: 2em;
+    margin-bottom: var(--space-xl);
 }
 
 .page-header h1 {
     font-size: 2em;
-    margin-bottom: 0.5em;
-    color: #333;
+    margin-bottom: var(--space-sm);
+    color: var(--color-text);
 }
 
 .page-header p {
-    color: #666;
+    color: var(--color-muted);
     font-size: 1em;
 }
 
@@ -97,7 +113,7 @@ section h2 {
 
 .project-item,
 .about-section article {
-    padding: 1.5em;
+    padding: var(--space-md);
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     background-color: #fafafa;
@@ -113,15 +129,15 @@ section h2 {
 .project-item h2,
 .about-section h3 {
     font-size: 1.5em;
-    margin-bottom: 0.5em;
-    color: #1a1a1a;
+    margin-bottom: var(--space-sm);
+    color: var(--color-primary);
 }
 
 .about-section p,
 .project-description {
-    color: #555;
+    color: var(--color-muted);
     line-height: 1.6;
-    margin-bottom: 1em;
+    margin-bottom: var(--space-sm);
 }
 
 /* -------------------- Projects Page -------------------- */
@@ -129,38 +145,38 @@ section h2 {
 .projects-list {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5em;
+    gap: var(--space-md);
 }
 
 .project-type {
     font-size: 0.9em;
-    color: #6495ED;
+    color: var(--color-accent);
     margin-bottom: 0.75em;
     font-weight: 500;
 }
 
 .project-highlights {
-    margin: 1em 0;
-    padding-left: 1.5em;
+    margin: var(--space-sm) 0;
+    padding-left: var(--space-md);
 }
 
 .project-highlights li {
-    color: #555;
+    color: var(--color-muted);
     line-height: 1.6;
-    margin-bottom: 0.5em;
+    margin-bottom: var(--space-xs);
     list-style-type: disc;
 }
 
 .project-links {
     display: flex;
-    gap: 1em;
-    margin-top: 1em;
+    gap: var(--space-sm);
+    margin-top: var(--space-sm);
 }
 
 .project-links a {
     display: inline-block;
-    padding: 0.5em 1em;
-    background-color: #1a1a1a;
+    padding: var(--space-xs) var(--space-sm);
+    background-color: var(--color-primary);
     color: white;
     text-decoration: none;
     border-radius: 4px;
@@ -169,7 +185,7 @@ section h2 {
 }
 
 .project-links a:hover {
-    background-color: #333;
+    background-color: var(--color-text);
 }
 
 /* Responsive adjustments */
@@ -181,18 +197,18 @@ section h2 {
 
 @media (min-width: 1024px) {
     .projects-list {
-        gap: 2em;
+        gap: var(--space-lg);
     }
     
     .project-item {
-        padding: 2em;
+        padding: var(--space-lg);
     }
 }
 
 /* -------------------- About Page -------------------- */
 
 .about-section {
-    padding: 1.5em;
+    padding: var(--space-md);
     border-radius: 8px;
     border: 1px solid rgb(203, 203, 203);
     background-color: rgb(203, 203, 203,0.1);
@@ -203,16 +219,16 @@ section h2 {
 .education-item {
     display: flex;
     flex-direction: column;
-    margin: 0.5em 0;
+    margin: var(--space-xs) 0;
 }
 
 /* Certifications specific */
 .cert-link a {
     text-decoration: none;
-    color: #1a1a1a;
+    color: var(--color-primary);
     transition: color 0.2s ease;
 }
 
 .cert-link a:hover {
-    color: #6495ED;
+    color: var(--color-accent);
 }
