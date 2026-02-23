@@ -15,6 +15,8 @@
 
         <title>{{ $title }}</title>
         <meta name="description" content="{{ $description }}">
+
+        <link rel="canonical" href="https://a-mamal.com">
         
         <meta name="theme-color" content="#555">
         @vite('resources/css/app.css')
