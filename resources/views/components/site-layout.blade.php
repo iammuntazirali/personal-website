@@ -1,5 +1,11 @@
 <!-- It always seems impossible until it is done. - Nelson Mandela -->
 
+@props([
+    'title' => config('app.name', 'Mamalikidou Anastasia'),
+    'description' => config('app.description', 'Passionate full-stack web developer crafting responsive and accessible websites and applications. Let\'s build!'),    
+    'header' => null,
+])
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -7,8 +13,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ $title ?? config('app.name', 'Mamalikidou Anastasia') }}</title>
-        <meta name="description" content="Portfolio">
+        <title>{{ $title }}</title>
+        <meta name="description" content="{{ $description }}">
+        
         <meta name="theme-color" content="#555">
         @vite('resources/css/app.css')
         <link rel="stylesheet" href="{{ asset('css/main.css') }}">
@@ -20,8 +27,6 @@
         {{-- @include('layouts.navigation') --}}
 
         @include('partials.header')
-
-        @props(['header' => null])
 
         <div class="right-wrapper">
             <main>

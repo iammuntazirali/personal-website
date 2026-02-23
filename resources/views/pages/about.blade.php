@@ -1,5 +1,6 @@
 <x-site-layout 
     :title="'About | Mamalikidou Anastasia'"
+    :description="'Learn more about Anastasia Mamalikidou, a passionate full-stack web developer building responsive, accessible websites and applications.'"
     :header="view('partials.page-header', ['title' => 'About'])"
 >
 

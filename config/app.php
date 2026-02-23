@@ -13,7 +13,16 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Mamalikidou Anastasia'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Application Description
+    |-------------------------------------------------------------------------- */
+    'description' => env(
+        'APP_DESCRIPTION', 
+        'Passionate full-stack web developer crafting responsive and accessible websites and applications. Let\'s build!'
+    ),
 
     /*
     |--------------------------------------------------------------------------
