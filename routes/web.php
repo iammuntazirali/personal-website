@@ -2,6 +2,7 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 // Public pages
@@ -13,9 +14,9 @@ Route::get('/projects', [ProjectController::class, 'index'])->name('projects');
 
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 
-Route::get('/contact', function() {
-    return view('pages.contact');
-})->name('contact');
+// Contact page routes
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/contact', [ContactController::class, 'sendContact'])->name('contact.send');
 
 
 // Authenticated routes

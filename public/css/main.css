@@ -279,3 +279,69 @@ section h2 {
 .cert-link a:hover {
     color: var(--color-accent);
 }
+
+
+
+/* -------------------- Contact Form -------------------- */
+
+.contact-section {
+    padding: var(--space-md);
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-surface-30);
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: var(--space-sm);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-size: 1em;
+    width: 100%;
+    background-color: var(--color-white);
+    color: var(--color-text-primary);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+.contact-section textarea {
+    resize: vertical;
+    min-height: 10rem;
+}
+
+.contact-section button {
+    align-self: flex-start;
+    padding: var(--space-sm) var(--space-lg);
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 6px;
+    color: var(--color-white);
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease;
+}
+
+.contact-section button:hover {
+    background-color: var(--color-secondary);
+}
+
+.contact-success {
+    color: var(--color-success);
+    margin-top: var(--space-sm);
+}
+
+.contact-error {
+    color: var(--color-error);
+    margin-top: var(--space-sm);
+}
