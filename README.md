@@ -1,8 +1,8 @@
-# Personal Website
+# a-mamal.com - Personal Website
 
 [<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=0077b6">](https://github.com/SamKirkland/FTP-Deploy-Action)
 
-[![good first issue](https://img.shields.io/badge/good%20first%20issue-available-brightgreen)](https://github.com/a-mamal/personal-website/labels/good%20first%20issue)
+[![good first issue](https://img.shields.io/badge/good%20first%20issue-available-brightgreen)](https://github.com/a-mamal/a-mamal-com/labels/good%20first%20issue)
 
 ## Table of Contents
 
@@ -24,13 +24,13 @@
 
 ## Overview
 
-A work-in-progress personal website designed to showcase my projects, skills, and ideas. Right now, it’s mostly a skeleton, but exciting features are on the way!
+A work-in-progress personal website built with Laravel and Blade, designed to showcase my projects, skills, and ideas. Features are evolving as I continue learning and experimenting.
 
+---
 
 ## Learning in Public 
 
-💬 I'm building this site as I learn, and your feedback is gold! If you have suggestions, ideas, or improvements — whether about code, design, accessibility or usability — don’t hesitate to share them. Every bit of feedback helps me improve and grow. 
-You can also leave feedback directly via [GitHub Issues](https://github.com/a-mamal/personal-website/issues).
+💬 I'm building this site as I learn, and your feedback is gold! If you have suggestions, ideas, or improvements — whether about code, design, accessibility or usability — don’t hesitate to share them via [GitHub Issues](https://github.com/a-mamal/a-mamal-com/issues).
 
 ### For Fellow Learners 
 🤝 I'll make sure to be adding **good first issues** for others beginning their journey.
@@ -39,12 +39,31 @@ Exploration, suggestions, and discussion are always welcome.
 Feel free to take your time with these issues. 
 I hope they help build confidence to tackle something bigger next!
 
+---
 
 ## Current Status
-- 🏠 Homepage: ✅ Basic layout
-- 🖼️ Project showcase: 🔜 Coming soon
-- 📖 About / Contact pages: 🔜 Coming soon
 
+- 🏠 Homepage 
+   - Basic layout ✅ 
+   - In progress 
+   - Related issues: [page: home](https://github.com/a-mamal/a-mamal-com/issues?q=is%3Aopen%20is%3Aissue%20label%3A%22page%3A%20home%22)
+
+- 🖼️ Project page 
+   - Project cards ✅ 
+   - In progress 
+   - Related issues: [page: projects](https://github.com/a-mamal/a-mamal-com/issues?q=is%3Aopen%20is%3Aissue%20label%3A%22page%3A%20projects%22)
+
+- 📖 About page
+   - Basic info ✅ 
+   - In progress 
+   - Related issues: [page: about](https://github.com/a-mamal/a-mamal-com/issues?q=is%3Aopen%20is%3Aissue%20label%3A%22page%3A%20about%22)
+   
+- ✉️ Contact page
+   - Functional contact form ✅ 
+   - In progress
+   - Related issues: [page: contact](https://github.com/a-mamal/a-mamal-com/issues?q=is%3Aopen%20is%3Aissue%20label%3A%22page%3A%20contact%22)
+
+---
 
 ## Tech Stack
   
@@ -62,21 +81,21 @@ I hope they help build confidence to tackle something bigger next!
 - 🌙 Dark/light mode toggle
 - 🎨 Fun animations and interactive elements
 
+---
 
 ## Goals
 
 - 📚 Learn while building
-- 🌱 Gradually evolve this site alongside my skills
+- 🌱 Evolve the site alongside my skills
 - 🎯 Showcase a personal brand that’s both professional and playful, reflecting my belief that learning and growing is more effective when it’s fun!
 - 🤝 Make room for fellow learners by offering beginner-friendly, learning-oriented issues
 
-
+---
 
 ## Database
 **Type:** MariaDB
 
 This section provides an overview of the database structure, tables, and relationships.
-It is still in-progress and will be updated.
 
 Tables in this project:
 
@@ -224,7 +243,7 @@ Eg.: Since an organization can both issue certifications and employ people they 
 
 To simplify and future-proof the schema, the table was renamed to `organizations` to represent `schools`, `companies`, `certifiers`, and other entities in a single unified table.
 
-> **Note:** This decision was made as part of the `epic` [feat(experiences): implement experiences linked to organizations #47](https://github.com/a-mamal/personal-website/issues/47), with the actual change applied in the first sub-issue [#48](https://github.com/a-mamal/personal-website/issues/48).
+> **Note:** This decision was made as part of the `epic` [feat(experiences): implement experiences linked to organizations #47](https://github.com/a-mamal/a-mamal-com/issues/47), with the actual change applied in the first sub-issue [#48](https://github.com/a-mamal/a-mamal-com/issues/48).
 
 
 ### Table: `degrees`
@@ -277,8 +296,8 @@ To simplify and future-proof the schema, the table was renamed to `organizations
 - A certificate optionally belongs to one spoken language (links the certificate to a profile's spoken language)
 
 **Seeder / Factory:**  
-- `CertificateFactory` exists but needs to be updated (see [Issue #55](https://github.com/a-mamal/personal-website/issues/55))
-- `CertificateSeeder` exists but needs to be updated (see [Issue #56](https://github.com/a-mamal/personal-website/issues/56))
+- `CertificateFactory` exists but needs to be updated (see [Issue #55](https://github.com/a-mamal/a-mamal-com/issues/55))
+- `CertificateSeeder` exists but needs to be updated (see [Issue #56](https://github.com/a-mamal/a-mamal-com/issues/56))
 
 
 
@@ -336,7 +355,7 @@ This table was added to track user experiences such as jobs, internships, or vol
 - `start_date` and `end_date` are nullable because users might not remember exact dates  
 - You might argue that `is_current` could be redundant and could be derived from the dates but since people sometimes don’t remember exact dates, having a missing `end_date` doesn’t necessarily mean the experience is current.
 
-> **Note:** Part of the epic [feat(experiences): implement experiences linked to organizations #47](https://github.com/a-mamal/personal-website/issues/47), with the actual migration in sub-issue [#49](https://github.com/a-mamal/personal-website/issues/49).
+> **Note:** Part of the epic [feat(experiences): implement experiences linked to organizations #47](https://github.com/a-mamal/a-mamal-com/issues/47), with the actual migration in sub-issue [#49](https://github.com/a-mamal/a-mamal-com/issues/49).
 
 
 
@@ -345,6 +364,8 @@ This table was added to track user experiences such as jobs, internships, or vol
 > The database schema supports multiple profiles per user.  
 > The application is not in that state. Remember...it's a skeleton!  
 > Support for multiple profiles will be added in the future.
+
+---
 
 ## Future Improvements
 
@@ -359,39 +380,51 @@ This table was added to track user experiences such as jobs, internships, or vol
 | Dark/Light Mode         | Smooth toggle between themes with persistence                                      |
 | Interactive Elements    | Animations and UI enhancements to make the site engaging                           |
                           
+---
 
 ## Setup
 
 This project uses Laravel with a simple local development setup, using **Laravel Herd** for local PHP and environment management, and **Laravel Breeze** for basic authentication scaffolding.
 The database used is **MariaDB**.
 
+### Requirements
+- PHP >=8.2
+- Composer
+- Node.js / npm
+- MariaDB
+
+> The project currently uses Laravel 12.x
+
 ### Local Development
 
-1. Fork the repository
+1. **Fork the repository**
    
    Go to the repo page and click Fork.
    This creates a copy under your account.
       
-2. Clone your fork:
+2. **Clone your fork**:
    
    ```bash
-   git clone https://github.com/<your-username>/personal-website.git
-   cd personal-website
+   git clone https://github.com/<your-username>/a-mamal-com.git
+   cd a-mamal-com
    ```
    
-3. Install dependencies:
+3. **Install dependencies:**
    
    ```bash
    composer install
+   npm install
+   npm run dev
    ```
 
-4. Copy the example environment file and generate an app key:
+4. **Copy the example environment file and generate an app key:**
    ```bash
    cp .env.example .env
    php artisan key:generate
    ```
    > Notes:
-   > - The `.env` file is intentionally not committed.
+   > - The .env file is intentionally excluded from version control. 
+   > - The provided `.env.example` makes it easier to configure your local environment and tweak settings without affecting the repository.
    > - The generated key is updated automatically in `.env`.
    >     If it doesn’t:
    >     - Copy the key manually from the console output:
@@ -403,7 +436,7 @@ The database used is **MariaDB**.
    >       APP_KEY = base64:xxxxxxxxxxxxxxxxxxxxxxxxxx
    >       ```
 
-5. Configure your database and admin credentials in `.env`, eg.:
+5. **Configure `.env`, eg.:**
    ```env
    DB_CONNECTION = mysql
    DB_HOST       = 127.0.0.1
@@ -416,31 +449,53 @@ The database used is **MariaDB**.
    ADMIN_EMAIL=admin@example.com
    ADMIN_PASSWORD=secret123
    ```
-6. Run migrations and seed initial data:
+6. **Run migrations and seed initial data:**
    
    ```bash
    php artisan migrate:fresh --seed
    ```
-   >**Warning:** migrate:fresh deletes all tables and data. Only use in local/dev environments.
+   >⚠️ Warning: migrate:fresh deletes all tables/data. Local/dev only.
 
-7. Start the development server:
+7. **Start the development server:**
 
 - If using Laravel Herd:
     - Open the project in Herd.
-    - Visit the Herd-provided local URL.
-- Otherwise:
+    - Visit the Herd-provided local URL `http://your-project.test`.
+- Standard:
     - Run
       ```bash
       php artisan serve
       ```
     - Visit http://localhost:8000 to view the site.
 
+#### Email Setup (Contact Form)
+
+The contact form uses email functionality. For local testing, Mailtrap is used.  
+
+Update your `.env` file with your mail settings:
+
+```env
+MAIL_MAILER=smtp
+MAIL_SCHEME=tls
+MAIL_HOST=127.0.0.1
+MAIL_PORT=2525
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_FROM_ADDRESS="hello@example.com"
+MAIL_FROM_NAME="${APP_NAME}"
+# Where contact form emails will go
+MAIL_TO_ADDRESS="hello@example.com"
+```
+💡 Replace these values with your own mail server credentials.
+
+---
+
 ## Contributing
 
 I welcome contributions from anyone looking to learn and experiment!
 
 - Pick tasks from the [Project Board](https://github.com/users/a-mamal/projects/4)
-- Leave suggestions, report bugs, or share ideas via [GitHub Issues](https://github.com/a-mamal/personal-website/issues).
+- Leave suggestions, report bugs, or share ideas via [GitHub Issues](https://github.com/a-mamal/a-mamal-com/issues).
 - Beginner-friendly issues are labeled **good first issue**.
 - Don’t worry about messing things up. We’re all learning together!
 
@@ -473,6 +528,7 @@ When your feature or fix is ready:
 - Keep things consistent with the rest of the project.
 - Don’t worry if it’s not perfect. Feedback is part of the process!
 
+---
 
 ## Deployment
 
@@ -481,11 +537,13 @@ When your feature or fix is ready:
 - Automation: Deployment handled via FTP Deploy Action
 - Database: Credentials managed via .env and .env.production
 
+---
 
 ## Tooling & Acknowledgments
 - Deployment automated via GitHub Actions using
   [SamKirkland/FTP-Deploy-Action](https://github.com/SamKirkland/FTP-Deploy-Action)
 
+---
 
 ## About This Project
 
@@ -494,6 +552,7 @@ When your feature or fix is ready:
 > Progress may be gradual, but I appreciate any feedback, suggestions, or contributions!  
 > Thank you for your patience and support 🙏.
 
+---
 
 ## License
 📜 Feel free to look around and get inspired. 
@@ -501,8 +560,12 @@ Tweak it, play with it, and make it your own!
 All code is my own work unless otherwise stated.  
 This project is licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-> Note: Since this is a personal project, some information is… well, personal 😄.  
-> Nothing to hide, but you might not want it for your own website as-is.
+> Note: Since this is a personal project, some information might be… well, **personal** 😄.  
+There's nothing to hide, but you might not want it for your own website as-is.
+I'm almost done generalizing the repo (for example different seeded data while mirroring production) as part of the cleanup milestone, but I don't promise you won't stumble upon my full name or other personal references in the codebase. 
+Use it as inspiration, don’t copy it blindly for your own site 😉
+
+---
 
 ## Notes
 
