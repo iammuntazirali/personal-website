@@ -32,6 +32,7 @@
         @vite('resources/js/app.js')
         <script src="{{ asset('js/main.js') }}" defer></script>
         <script src="{{ asset('js/theme-switcher.js') }}" defer></script>
+        <script src="{{ asset('js/sidebar.js') }}" defer></script>
 
     </head>
     <body>
