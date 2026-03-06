@@ -13,21 +13,26 @@
         <form method="POST" action="{{ route('contact.send') }}">
             @csrf
 
+            <label for="name">Name:</label>
             <input 
                 type="text" 
+                id="name"
                 name="name" 
                 placeholder="Your Name" 
                 value="{{ old('name') }}" 
                 required>
 
             @error('name')
-                <span class="contact-error">{{ $message }}</span>
+                <span id="name-error" class="contact-error">{{ $message }}</span>
             @enderror
 
+
+            <label for="email">Email:</label>
             <input 
                 type="email" 
+                id="email"
                 name="email" 
-                placeholder="Your Email" 
+                placeholder="example@mail.com" 
                 value="{{ old('email') }}" 
                 required>
 
@@ -35,9 +40,11 @@
                 <span class="contact-error">{{ $message }}</span>
             @enderror
 
+            <label for="message"> Your message: </label>
             <textarea 
+                id="message"
                 name="message" 
-                placeholder="Your Message" 
+                placeholder="Write your message here" 
                 required>{{ old('message') }}</textarea>
 
             @error('message')

@@ -31,7 +31,10 @@
 /* Names according to Coolors.co: */
 
     --color-fire-engine-red: rgb(198, 40, 40);
+
     --color-folly:           rgb(255, 71, 94);
+    --color-folly-90:        rgba(255, 71, 94, 0.9);
+
     --color-selective-yellow:rgb(244, 180, 0);
     --color-yellow-green:    rgb(138, 201, 38);
     --color-steel-blue:      rgb(25, 130, 196);
@@ -56,7 +59,10 @@
 
     /* Color roles */
     --color-primary:        var(--color-steel-blue); 
+
     --color-secondary:      var(--color-folly);
+    --color-secondary-90:   var(--color-folly-90);
+
     --color-accent:         var(--color-selective-yellow);
     --color-background:     var(--color-seasalt);
     --color-surface:        var(--color-silver);
@@ -515,17 +521,25 @@ section h2 {
     padding: var(--space-md);
     border-radius: 8px;
     border: 1px solid var(--color-border-section);
-    background-color: var(--color-surface-30);
+    background-color: var(--color-secondary-90);
 }
 
 .contact-section form {
     display: flex;
     flex-direction: column;
-    gap: var(--space-md);
+}
+
+.contact-section label {
+    display: block;
+    margin-bottom: var(--space-xs);
+    font-size: var(--font-size-md);
+    font-weight: 600;
+    color: var(--color-white);
 }
 
 .contact-section input,
 .contact-section textarea {
+    margin-bottom: var(--space-md);
     padding: var(--space-sm);
     border: 1px solid var(--color-border-input);
     border-radius: 6px;
@@ -545,6 +559,11 @@ section h2 {
 .contact-section textarea {
     resize: vertical;
     min-height: 10rem;
+}
+
+.contact-section .button-fire {
+    border: 1px solid;
+    border-color: var(--color-white);
 }
 
 .contact-success {
