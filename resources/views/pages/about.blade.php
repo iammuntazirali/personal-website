@@ -4,11 +4,12 @@
     :headerTitle="'About me'"
     :subtitle="'A brief overview of my experience, education, skills, etc.'"
     >
-
-    @include('partials.about.bio')
-    @include('partials.about.links')
-    @include('partials.about.education')
-    @include('partials.about.experience')
-    @include('partials.about.certifications')
-    @include('partials.about.sp-languages')
+    <div class="about-wrapper">
+        @include('partials.about.bio')
+        {{-- @include('partials.about.links') --}}
+        @include('partials.about.education')
+        @include('partials.about.experience')
+        @include('partials.about.certifications')
+        @include('partials.about.sp-languages')
+    </div>
 </x-site-layout>

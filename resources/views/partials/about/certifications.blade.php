@@ -25,7 +25,7 @@
             @if($cert->credential_link)
                 <div class="card-actions">
                     <a  href="{{ $cert->credential_link }}" 
-                        class="button-fire"
+                        class="button"
                         target="_blank"
                         rel="noopener noreferrer">
                         View Certificate

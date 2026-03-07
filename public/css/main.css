@@ -515,7 +515,36 @@ section h2 {
     }
 }
 
-/* -------------------- Contact Form -------------------- */
+/* --------------------- About Page --------------------- */
+
+.about-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: var(--space-md);
+    border-radius: 8px;
+    border: 1px solid var(--color-border-section);
+    background-color: var(--color-surface-30);
+    box-shadow: var(--shadow-card-sm);
+    gap: var(--space-xs);
+}
+
+.about-section p.card-meta a,
+.about-section p.card-meta a:visited {
+    text-decoration: none;
+}
+
+.about-section p.card-meta a:hover {
+    text-decoration: underline;
+}
+
+/* -------------------- Contact Page -------------------- */
 
 .contact-section {
     padding: var(--space-md);
